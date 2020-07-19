@@ -1,0 +1,13 @@
+@import "variables";
+
+@import "mixins";
+@import "global";
+
+@import "components/_header";
+@import "components/_main";
+@import "components/_modals";
+@import "components/_inputs";
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}

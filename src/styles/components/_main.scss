@@ -1,0 +1,37 @@
+.main {
+	margin-top: 60px;
+
+	&__start-page {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: calc(100vh - 60px);
+	}
+
+	&__title {
+		font-size: 50px;
+		color: #293A5B;
+		letter-spacing: -1px;
+		text-align: center;
+	}
+
+	&__start-button {
+		margin: 48px 0;
+	}
+
+	&__image {
+		min-width: 450px;
+		min-height: 358px;
+		background: url(../assets/image/depth-chart-concept-symbol.png) center center no-repeat;
+		background-size: cover;
+	}
+}
+
+.modal-dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) !important;
+	margin: 0 !important;
+}

@@ -1,0 +1,188 @@
+$row_modifiers: start center end top middle bottom around between v-between reverse v-reverse zero-space baseline nowrap wrap;
+
+@mixin prefix($declarations, $prefixes: ()) {
+	@each $property, $value in $declarations {
+		@each $prefix in $prefixes {
+			#{'-' + $prefix + '-' + $property}: $value;
+		}
+
+		#{$property}: $value;
+	}
+}
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin prefix($declarations, $prefixes: ()) {
+	@each $property, $value in $declarations {
+		@each $prefix in $prefixes {
+			#{'-' + $prefix + '-' + $property}: $value;
+		}
+
+		#{$property}: $value;
+	}
+}
+
+@mixin touchLandscape {
+	@media screen and (max-width: 830px) and (max-height: 435px) {
+		@content;
+	}
+}
+
+//---------------------------------------------------------------------------------------
+// Mixin for using flex properties like in grid (.row class modifiers)
+// PARAMETERS:
+// $props... - one or many properties separated by comma
+// Examples of use:
+// .header { display: flex; @include flex_util(end, middle); }
+// .footer { display: flex; @include breakpoint(768) { @include flex_util(bottom); } }
+// NOTE: all selectors where flex_util included should have display: flex; property
+// useful link about flex - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+//---------------------------------------------------------------------------------------
+@mixin flex_util($props...) {
+
+	@each $prop in $props {
+
+		//horizontal aligning of child blocks at START (default in css) http://prnt.sc/cmt9y5
+		@if $prop == 'start' {
+
+			-ms-flex-pack: start; @include prefix( ( justify-content: flex-start ), webkit );
+
+			//horizontal aligning of child blocks at CENTER http://prntscr.com/cmtbej
+		} @else if $prop == 'center' {
+
+			-ms-flex-pack: center; @include prefix( ( justify-content: center ), webkit );
+
+			//horizontal aligning of child blocks at END http://prntscr.com/cmtbw7
+		} @else if $prop == 'end' {
+
+			-ms-flex-pack: end; @include prefix( ( justify-content: flex-end ), webkit );
+
+			//vertical aligning of child blocks at TOP (default in css) http://prntscr.com/cmtcap
+		} @else if $prop == 'top' {
+
+			-ms-flex-align: start; @include prefix( ( align-items: flex-start ), webkit );
+
+			//vertical aligning of child blocks at MIDDLE http://prntscr.com/cmtd8u
+		} @else if $prop == 'middle' {
+
+			-ms-flex-align: center; @include prefix( ( align-items: center ), webkit );
+
+			//vertical aligning of child blocks at font's baseline http://prntscr.com/cmtfg5
+		} @else if $prop == 'baseline' {
+
+			-ms-flex-align: baseline; @include prefix( ( align-items: baseline ), webkit );
+
+			//vertical aligning of child blocks at BOTTOM http://prntscr.com/cmtevt
+		} @else if $prop == 'bottom' {
+
+			-ms-flex-align: end; @include prefix( ( align-items: flex-end ), webkit );
+
+			//add equal (calculated by browser) space to child blocks on sides http://prntscr.com/cmtghi
+		} @else if $prop == 'around' {
+
+			@include prefix( ( justify-content: space-around ), webkit );
+
+			//add equal (calculated by browser) space BETWEEN child blocks http://prntscr.com/cmtgw8
+		} @else if $prop == 'between' {
+
+			-ms-flex-pack: justify; @include prefix( ( justify-content: space-between ), webkit );
+
+			//add equal (calculated by browser) vertical space BETWEEN child blocks http://prntscr.com/cmtkb9
+		} @else if $prop == 'v-between' {
+
+			@include prefix( ( align-content: space-between ), webkit );
+
+			//reverse child blocks order http://prntscr.com/cmtpgg
+		} @else if $prop == 'reverse' {
+
+			@include prefix( ( flex-direction: row-reverse ), webkit ms );
+
+			//vertical reverse child blocks order http://prntscr.com/cmtpz7
+		} @else if $prop == 'v-reverse' {
+
+			@include prefix( ( flex-direction: column-reverse ), webkit ms );
+
+			//remove default side paddings of flexgrid columns
+		} @else if $prop == 'zero-space' { margin-left: 0; margin-right: 0;
+
+			@include columns_selector { padding-left: 0; padding-right:0; }
+
+			//add wrap property to flex block, in css by default flex-wrap: nowrap
+		} @else if $prop == 'wrap' { @include prefix( ( flex-wrap: wrap ), webkit ms );
+
+			//add nowrap property to flex block
+		} @else if $prop == 'nowrap' { @include prefix( ( flex-wrap: nowrap ), webkit ms ); }
+
+	}
+
+}
+
+@mixin breakpoint($value) {
+	@if not unitless($value)  {
+
+		@media screen and (max-width: $value) { @content; }
+
+	} @else {
+
+		@if $value == 320 {
+
+			@media (max-width: 320px) { @content; }
+
+		} @else if $value == 480 {
+
+			@media (max-width: 480px) { @content; }
+
+		} @else if $value == 768 {
+
+			@media (max-width: 768px) { @content; }
+
+		} @else if $value == 1024 {
+
+			@media (max-width: 1024px) { @content; }
+
+		} @else if $value == 1200 {
+
+			@media (max-width: 1200px) { @content; }
+
+		} @else if $value == 1280 {
+
+			@media (max-width: 1280px) { @content; }
+
+		} @else if $value == 1440 {
+
+			@media (max-width: 1440px) { @content; }
+
+		} @else if $value == 1680 {
+
+			@media (max-width: 1680px) { @content; }
+
+		} @else {
+
+			@warn "Breakpoint mixin supports: 320, 480, 768, 1024, 1200, 1280, 1440, 1680; breakpoint was "+$value;
+
+		}
+
+	}
+}
+
+@mixin resize_screen($screenSize, $screenSizeTo: 0) {
+	@media screen and (max-width: $screenSize) and  (min-width: $screenSizeTo) {
+		@content;
+	}
+}
+
+@mixin minBreakpoint($value) {
+	@media screen and (min-width: $value) {
+		@content;
+	}
+}
+
+@mixin transition($prop: all, $time: 0.2s) {
+	transition: $prop $time ease-out;
+}

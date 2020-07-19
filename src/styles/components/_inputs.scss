@@ -1,0 +1,40 @@
+.input {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 36px;
+	border-radius: 5px;
+	padding: 0;
+	border: 1px solid transparent;
+
+	input {
+		display: block;
+    padding-top: 0;
+    transition: none;
+		min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    padding: 0 16px;
+    margin: 0;
+    font-size: 14px;
+		letter-spacing: .2px;
+		background: rgba(#37474f, 0.1);
+		border: 1px solid transparent;
+		border-radius: 5px !important;
+		outline: none !important;
+		transition: .2s ease-in-out;
+		color: #455a64;
+
+		&:hover {
+			border: 1px solid rgba(#37474f, 0.3);
+			transition: .2s ease-in-out;
+		}
+
+		&:active,
+		&:focus,
+		&:focus-within {
+			border: 1px solid rgba(#37474f, 0.8);
+			transition: .2s ease-in-out;
+		}
+	}
+}

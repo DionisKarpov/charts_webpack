@@ -1,0 +1,44 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 60px;
+	padding: 0 32px;
+	background: #F2F4F2;
+
+	&__home	{
+		color: #293A5B;
+		font-size: 14px;
+		letter-spacing: 0.2px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__logo-container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		min-width: 32px;
+		min-height: 35px;
+		background: url(../assets/image/logo-Idea-depth-chart.png) center center no-repeat;
+		background-size: contain;
+		margin-right: 5px;
+	}
+
+	&__logo-title {
+		font-size: 18px;
+		cursor: default;
+	}
+}
