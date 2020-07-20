@@ -68,6 +68,23 @@
 		margin: 0 16px;
 		background: #455a64;
 	}
+
+	&__avatar {
+		margin-top: 30px;
+		width: 100%;
+		display: block;
+		min-height: 140px;
+		margin-bottom: 24px;
+		background: #ced9dc url(../assets/image/noavatar.svg) center 0 no-repeat;
+		background-size: 35%;
+		position: relative;
+
+		.button {
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+		}
+	}
 }
 
 .overview {

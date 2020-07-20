@@ -4,11 +4,13 @@ module.exports = {
 	entry: {
 		'src/styles/styles.css': 'src/styles/styles.scss'
 	},
-  entry: __dirname + "/src/app/index.js",
+  entry: {
+		index: __dirname + "/src/app/index.js",
+		home: __dirname + "/src/app/home.js",
+	},
   output: {
     path: __dirname + '/dist',
-    filename: 'bundle.js', 
-    publicPath: '/'
+    filename: '[name].js'
 	},
   module: { 
       rules: [ 
@@ -61,9 +63,17 @@ module.exports = {
   },
   plugins: [ 
       new HtmlWebpackPlugin({
-          template: __dirname + "/src/public/index.html",
-          inject: 'body'
-      })
+				template: './src/public/index.html',
+				inject: true,
+				chunks: ['index'],
+				filename: 'index.html'
+			}),
+			new HtmlWebpackPlugin({
+				template: './src/public/home.html',
+				inject: true,
+				chunks: ['home'],
+				filename: 'home.html'
+			}),
   ],
   devServer: { 
       contentBase: './src/public', 

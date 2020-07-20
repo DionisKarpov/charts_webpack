@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Charts</title>
+        <link rel="stylesheet" type="text/css" href="./../../dist/style.css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header">
+            <a class="header__home" href="/index.html">Home</a>
+            <div class="header__logo-container">
+                <span class="header__logo" alt="DeepChart.io Logo"></span>
+                <span class="header__logo-title">DeepChart.io</span>
+            </div>
+            <div class="header__buttons">
+                <button class="button button__profile" data-toggle="modal" data-target="#profileModal">
+                    <img src="./assets/image/noavatar.svg" width="100%" height="100%" alt="">
+                </button>
+            </div>
+        </header>
+        <main class="container-fluid main">
+            <div class="row">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">Depth Charts</a></li>
+                        <li><a href="#">Athletes</a></li>
+                        <li><a href="#">Positions</a></li>
+                    </ul>
+                </nav>
+                <div class="main__start-page">
+                    <div class="main__title">
+                        Create your own Depth Charts<br> for all of your athletes.
+                    </div>
+                    <button class="main__start-button button button--contained button--large"
+                            data-toggle="modal" data-target="#watchOverviewModal">
+                        Watch Overview
+                    </button>
+                    <div class="main__image">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3 class="modal-title text-center">Profile</h3>
+                        <div class="modal-form">
+                            <div class="modal-form__avatar">
+                                <button type="button" class="button button--ghost button--medium">
+                                    Change Image
+                                </button>
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="name" name="name" placeholder="John Doe">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="Location" name="Location" placeholder="San Francisco, CA">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="mail" name="mail" placeholder="example@gmail.com">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="phone" name="phone" placeholder="1-555-555-5555">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="password" name="password" placeholder="*****">
+                            </div>
+                            <button type="button" class="modal-form__login-button button button--contained button--medium mt-5">
+                                Save changes
+                            </button>
+                            <div class="modal-form__section">
+                                <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
