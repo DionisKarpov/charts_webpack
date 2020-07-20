@@ -1,2 +1,7 @@
 node_modules/
 .DS_Store
+.idea/charts_webpack.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
