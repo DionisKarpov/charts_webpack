@@ -1,18 +1,33 @@
 .swappable {
 	display: grid;
-	grid-template-columns: repeat(4, 100px [col-start]);
+	grid-template-columns: repeat(4, 200px [col-start]);
 	grid-template-rows: repeat(5, 100px [col-start]);
+	column-gap: 5px;
+	row-gap: 5px;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 
 	li {
-		width: 100px;
+		width: 200px;
 		height: 100px;
-		background: grey;
-		border: 5px solid lightblue;
+		background: #ececec;
+		border: 5px solid #000;
 		font-size: 35px;
-		color: #fff;
+		color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+
+		&:hover {
+			background: #b8b8b8;
+			cursor: grab;
+
+			body.draggable--is-dragging & {
+				cursor: grabbing;
+			}
+		}
 
 		&.draggable {
 
@@ -33,17 +48,23 @@
 .side-positions {
 	display: grid;
 	grid-template-rows: repeat(5, 100px [col-start]);
+	row-gap: 5px;
 	padding: 0;
-	margin: 0;
+	margin: 0 5px 0 0;
 	list-style: none;
 
+
 	li {
-		width: 100px;
+		width: 200px;
 		height: 100px;
-		background: grey;
-		border: 5px solid lightcoral;
+		background: #404040;
+		border: 5px solid #646bff;
 		font-size: 15px;
 		color: #fff;
+		font-weight: bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
