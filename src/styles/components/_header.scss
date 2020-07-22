@@ -9,6 +9,7 @@
 	height: 60px;
 	padding: 0 32px;
 	background: #F2F4F2;
+	box-shadow: 0px 2px 10px 1px rgba(#8c8c8c, 0.3);
 
 	&__home	{
 		color: #293A5B;
@@ -40,5 +41,31 @@
 	&__logo-title {
 		font-size: 18px;
 		cursor: default;
+	}
+
+	&__back {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 36px;
+		width: 36px;
+		border-radius: 50%;
+		transition: .15s ease-in-out;
+		margin-left: -24px;
+
+		&:before  {
+			width: 24px;
+			height: 24px;
+			background-image: url(../assets/image/arrow-left.svg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+		}
+
+		&:hover {
+			background-color: rgba(#293A5B, 0.1);
+			transition: .15s ease-in-out;
+		}
 	}
 }

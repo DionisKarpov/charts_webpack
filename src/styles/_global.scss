@@ -309,6 +309,7 @@ section {
 
 .menu {
   width: 200px;
+  min-width: 200px;
   flex-basis: 200px;
   background: #F2F4F2;
 
@@ -324,9 +325,16 @@ section {
     display: block;
     font-size: 15px;
     text-transform: uppercase;
+    transition: .15s ease-in-out;
 
     &:hover {
       text-decoration: none;
+      background: #455a64;
+      color: #fff;
+      transition: .15s ease-in-out;
+    }
+
+    &.active {
       background: #455a64;
       color: #fff;
     }

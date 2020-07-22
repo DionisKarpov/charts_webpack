@@ -9,7 +9,9 @@
     </head>
     <body>
         <header class="header">
-            <a class="header__home" href="/index.html">Home</a>
+						<a class="header__back" href="/home.html">
+						
+						</a>
             <div class="header__logo-container">
                 <span class="header__logo" alt="DeepChart.io Logo"></span>
                 <span class="header__logo-title">DeepChart.io</span>
@@ -20,26 +22,39 @@
                 </button>
             </div>
         </header>
-        <main class="container-fluid main">
-            <div class="row">
-                <nav class="menu">
+        <main class="container-fluid athletes">
+            <div class="row flex-nowrap">
+                <nav class="menu athletes__side-menu">
                     <ul>
                         <li><a href="#">Depth Charts</a></li>
-                        <li><a href="/athletes.html">Athletes</a></li>
+                        <li><a class="active" href="/athletes.html">Athletes</a></li>
                         <li><a href="#">Positions</a></li>
                     </ul>
                 </nav>
-                <div class="main__start-page">
-                    <div class="main__title">
-                        Create your own Depth Charts<br> for all of your athletes.
-                    </div>
-                    <button class="main__start-button button button--contained button--large"
-                            data-toggle="modal" data-target="#watchOverviewModal">
-                        Watch Overview
-                    </button>
-                    <div class="main__image">
-
-                    </div>
+                <div class="athletes__list-container">
+									<div class="athletes__list-head">
+										<div class="athletes__list-title">
+											Athletes List
+										</div>
+										<button class="button button--ghost button--medium">
+											Create Athlete
+										</button>
+									</div>
+									<ul class="athletes__list">
+										<li class="athletes__item athlete">
+											<div class="athlete__avatar"></div>
+											<div class="athlete__info">
+												<div class="athlete__name">John Best</div>
+												<div class="athlete__year">Grad year: 22</div>
+											</div>
+										</li>
+										<li class="athletes__item athlete">
+											<div class="athlete__avatar"></div>
+										</li>
+										<li class="athletes__item athlete">
+											<div class="athlete__avatar"></div>
+										</li>
+									</ul>
                 </div>
             </div>
         </main>
