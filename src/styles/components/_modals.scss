@@ -137,6 +137,30 @@
 	&__checkbox {
 		display: flex;
 	}
+
+	&__textarea {
+		width: 100%;
+    padding: 8px 16px;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: .2px;
+    background: rgba(55, 71, 79, 0.1);
+    border: 1px solid transparent;
+    border-radius: 5px !important;
+    outline: none !important;
+    transition: .2s ease-in-out;
+		color: #455a64;
+		
+		&::-webkit-scrollbar {
+      background-color: transparent !important;
+      width: 2px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #8c8c8c !important;
+      border-radius: 2px !important;
+    }
+	}
 }
 
 .overview {
