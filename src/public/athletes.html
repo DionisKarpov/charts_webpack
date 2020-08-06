@@ -156,22 +156,37 @@
                             <div class="modal-form__section align-items-start">
                                 <div class="modal-form__avatar my-0 mr-4 modal-form__avatar--square"></div>
                                 <div class="modal-form__section modal-form__section--column">
-                                    <div class="modal-form__input input input--contained">
-                                        <input type="name" name="firstName" placeholder="First name">
+                                    <div class="modal-form__input-container">
+                                        <label class="modal-form__label" for="firstName">First Name</label>
+                                        <div class="modal-form__input input input--contained">
+                                            <input type="name" name="firstName" placeholder="First name">
+                                        </div>
                                     </div>
-                                    <div class="modal-form__input input input--contained">
-                                        <input type="name" name="lastName" placeholder="Last name">
+                                    <div class="modal-form__input-container">
+                                        <label class="modal-form__label" for="lastName">Last Name</label>
+                                        <div class="modal-form__input input input--contained">
+                                            <input type="name" name="lastName" placeholder="Last name">
+                                        </div>
                                     </div>
-                                    <div class="modal-form__input input input--contained">
-                                        <input type="mail" name="mail" placeholder="Email">
+                                    <div class="modal-form__input-container">
+                                        <label class="modal-form__label" for="email">Email</label>
+                                        <div class="modal-form__input input input--contained">
+                                            <input type="email" name="email" placeholder="Email">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-form__input input input--contained">
-                                <input type="phone" name="phone" placeholder="Phone number">
+                            <div class="modal-form__input-container">
+                                <label class="modal-form__label" for="phone">Phone Number</label>
+                                <div class="modal-form__input input input--contained">
+                                    <input type="phone" name="phone" placeholder="Enter phone">
+                                </div>
                             </div>
-                            <div class="modal-form__input input input--contained mb-4">
-                                <input type="password" name="school" placeholder="Enter school">
+                            <div class="modal-form__input-container">
+                                <label class="modal-form__label" for="school">School</label>
+                                <div class="modal-form__input input input--contained mb-4">
+                                    <input type="password" name="school" placeholder="Enter school">
+                                </div>
                             </div>
                             <div class="modal-form__section flex-nowrap mb-4">
                                 <div class="modal-form__section modal-form__section--column align-items-start">
@@ -222,7 +237,7 @@
                                 <div class="modal-form__section modal-form__section--column align-items-start ml-3">
                                     <label class="modal-form__label" for="gradYear">Weight (kg)</label>
                                     <div class="modal-form__input input input--contained mb-0">
-                                        <input type="weight" name="weight" placeholder="">
+                                        <input type="weight" name="weight" placeholder="Enter weight">
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +260,8 @@
                             </div>
                             <div class="modal-form__section modal-form__section--column align-items-start">
                                 <label class="modal-form__label" for="gradYear">Notes</label>
-                                <textarea class="modal-form__textarea textarea" name="notes" id="notes" cols="10" rows="4"></textarea>
+                                <textarea   class="modal-form__textarea textarea" name="notes" 
+                                            id="notes" cols="10" rows="4" placeholder="Type some notes"></textarea>
                             </div>
                             <div class="modal-form__buttons mt-4">
                                 <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
