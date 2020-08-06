@@ -191,3 +191,33 @@
 		letter-spacing: 0.2px;
 	}
 }
+
+.modal {
+
+	&__section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__label {
+		font-size: 18px;
+		color: #455a64;
+		letter-spacing: 0px;
+		margin-bottom: 16px;
+	}
+
+	&__big-text {
+		display: block;
+		font-size: 24px;
+		color: #455a64;
+		letter-spacing: 0px;
+		margin-bottom: 16px;
+	}
+
+	&__buttons-section {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
