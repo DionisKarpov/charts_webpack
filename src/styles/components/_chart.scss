@@ -1,0 +1,76 @@
+.swappable {
+	display: grid;
+	grid-template-columns: repeat(4, 200px [col-start]);
+	grid-template-rows: repeat(5, 100px [col-start]);
+	column-gap: 5px;
+	row-gap: 5px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	li {
+		width: 200px;
+		height: 100px;
+		background: #ececec;
+		border: 5px solid #000;
+		font-size: 35px;
+		color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+
+		&:hover {
+			background: #b8b8b8;
+			cursor: grab;
+
+			body.draggable--is-dragging & {
+				cursor: grabbing;
+			}
+		}
+
+		&.draggable {
+
+			&-source {
+
+				&--is-dragging {
+					background: red;
+				}
+			}
+
+			&-mirror {
+				background: blue;
+			}
+		}
+	}
+}
+
+.side-positions {
+	display: grid;
+	grid-template-rows: repeat(5, 100px [col-start]);
+	row-gap: 5px;
+	padding: 0;
+	margin: 0 5px 0 0;
+	list-style: none;
+
+
+	li {
+		width: 200px;
+		height: 100px;
+		background: #404040;
+		border: 5px solid #646bff;
+		font-size: 15px;
+		color: #fff;
+		font-weight: bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.chart-table {
+	display: flex;
+	//align-items: center;
+	//align-content: center;
+	//justify-content: center;
+}

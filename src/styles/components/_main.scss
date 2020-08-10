@@ -26,6 +26,14 @@
 		background: url(../assets/image/depth-chart-concept-symbol.png) center center no-repeat;
 		background-size: cover;
 	}
+
+	&__chart-page {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: calc(100% - 200px);
+		height: calc(100vh - 60px);
+	}
 }
 
 .modal-dialog {
