@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Charts</title>
+        <link rel="stylesheet" type="text/css" href="./../../dist/style.css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header">
+						<a class="header__back" href="/home.html">
+						
+						</a>
+            <div class="header__logo-container">
+                <span class="header__logo" alt="DeepChart.io Logo"></span>
+                <span class="header__logo-title">DeepChart.io</span>
+            </div>
+            <div class="header__buttons">
+                <button class="button button__profile" data-toggle="modal" data-target="#profileModal">
+                    <img src="./assets/image/noavatar.svg" width="100%" height="100%" alt="">
+                </button>
+            </div>
+        </header>
+        <main class="container-fluid athletes">
+            <div class="row flex-nowrap">
+                <nav class="menu athletes__side-menu">
+                    <ul>
+                        <li><a href="/home.html">Depth Charts</a></li>
+                        <li><a class="active" href="/athletes.html">Athletes</a></li>
+                        <li><a href="#">Positions</a></li>
+                    </ul>
+                </nav>
+                <div class="athletes__list-container">
+                    <div class="athletes__list-head">
+                        <div class="athletes__list-title">
+                            Athletes List
+                        </div>
+                        <button class="button button--ghost button--medium" data-toggle="modal" data-target="#newAthleteModal">
+                            <span class="mr-2">+</span>
+                            Create Athlete
+                        </button>
+                    </div>
+                    <ul class="athletes__list">
+                        <li class="athletes__item athlete">
+                            <div class="athlete__avatar">
+                              <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
+                            </div>
+                            <div class="athlete__info">
+                              <div class="athlete__name">John Best</div>
+                              <div class="athlete__year">Grad year: 22</div>
+                            </div>
+                            <div class="athlete__actions">
+                              <span class="athlete__notes" alt="Notes">
+                                <span class="athlete__tooltip">Notes</span>
+                              </span>
+                              <span class="athlete__edit" alt="Edit">
+                                <span class="athlete__tooltip">Edit</span>
+                              </span>
+                              <span class="athlete__remove" alt="Remove"
+                                    data-toggle="modal" data-target="#removeAthleteModal">
+                                <span class="athlete__tooltip">
+                                  Remove
+                                </span>
+                              </span>
+                            </div>
+                        </li>
+                        <li class="athletes__item athlete">
+                            <div class="athlete__avatar">
+                                <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
+                            </div>
+                            <div class="athlete__info">
+                                <div class="athlete__name">John Deer</div>
+                                <div class="athlete__year">Grad year: 25</div>
+                            </div>
+                            <div class="athlete__actions">
+                                <span class="athlete__notes" alt="Notes">
+                                    <span class="athlete__tooltip">Notes</span>
+                                </span>
+                                <span class="athlete__edit" alt="Edit">
+                                    <span class="athlete__tooltip">Edit</span>
+                                </span>
+                                <span class="athlete__remove" alt="Remove"
+                                      data-toggle="modal" data-target="#removeAthleteModal">
+                                    <span class="athlete__tooltip">
+                                      Remove
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="athletes__item athlete">
+                            <div class="athlete__avatar">
+                                <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
+                            </div>
+                            <div class="athlete__info">
+                                <div class="athlete__name">John Show</div>
+                                <div class="athlete__year">Grad year: 18</div>
+                            </div>
+                            <div class="athlete__actions">
+                                <span class="athlete__notes" alt="Notes">
+                                    <span class="athlete__tooltip">Notes</span>
+                                </span>
+                                <span class="athlete__edit" alt="Edit">
+                                    <span class="athlete__tooltip">Edit</span>
+                                </span>
+                                <span class="athlete__remove" alt="Remove"
+                                      data-toggle="modal" data-target="#removeAthleteModal">
+                                  <span class="athlete__tooltip">
+                                    Remove
+                                  </span>
+                              </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3 class="modal-title text-center">Profile</h3>
+                        <div class="modal-form">
+                            <div class="modal-form__avatar">
+                                <button type="button" class="button button--ghost button--medium">
+                                    Change Image
+                                </button>
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="name" name="name" placeholder="John Doe">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="Location" name="Location" placeholder="San Francisco, CA">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="mail" name="mail" placeholder="example@gmail.com">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="phone" name="phone" placeholder="1-555-555-5555">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="password" name="password" placeholder="*****">
+                            </div>
+                            <button type="button" class="modal-form__login-button button button--contained button--medium mt-5">
+                                Save changes
+                            </button>
+                            <div class="modal-form__section">
+                                <button type="button" class="button button--ghost button--medium w-100" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="newAthleteModal" tabindex="-1" role="dialog" aria-labelledby="newAthleteModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog--large" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3 class="modal-title text-center">New Athlete</h3>
+                        <div class="modal-form w-100">
+                            <div class="modal-form__section align-items-start">
+                                <div class="modal-form__avatar my-0 mr-4 modal-form__avatar--square"></div>
+                                <div class="modal-form__section modal-form__section--column">
+                                    <div class="modal-form__input-container">
+                                        <label class="modal-form__label" for="firstName">First Name</label>
+                                        <div class="modal-form__input input input--contained">
+                                            <input type="name" name="firstName" placeholder="First name">
+                                        </div>
+                                    </div>
+                                    <div class="modal-form__input-container">
+                                        <label class="modal-form__label" for="lastName">Last Name</label>
+                                        <div class="modal-form__input input input--contained">
+                                            <input type="name" name="lastName" placeholder="Last name">
+                                        </div>
+                                    </div>
+                                    <div class="modal-form__input-container">
+                                        <label class="modal-form__label" for="email">Email</label>
+                                        <div class="modal-form__input input input--contained">
+                                            <input type="email" name="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-form__input-container">
+                                <label class="modal-form__label" for="phone">Phone Number</label>
+                                <div class="modal-form__input input input--contained">
+                                    <input type="phone" name="phone" placeholder="Enter phone">
+                                </div>
+                            </div>
+                            <div class="modal-form__input-container">
+                                <label class="modal-form__label" for="school">School</label>
+                                <div class="modal-form__input input input--containe">
+                                    <input type="password" name="school" placeholder="Enter school">
+                                </div>
+                            </div>
+                            <div class="modal-form__section flex-nowrap mb-3">
+                                <div class="modal-form__section modal-form__section--column align-items-start">
+                                    <label class="modal-form__label" for="gradYear">Grad year</label>
+                                    <select class="modal-form__select select w-100" name="gradYear" id="gradYear">
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="modal-form__section modal-form__section--column align-items-start ml-3">
+                                    <label class="modal-form__label" for="gradYear">Grad year</label>
+                                    <select class="modal-form__select select w-100" name="height" id="height">
+                                        <option value="180">180</option>
+                                        <option value="181">181</option>
+                                        <option value="182">182</option>
+                                        <option value="183">183</option>
+                                        <option value="184">184</option>
+                                        <option value="185">185</option>
+                                        <option value="186">186</option>
+                                        <option value="187">187</option>
+                                        <option value="188">188</option>
+                                        <option value="189">189</option>
+                                        <option value="190">190</option>
+                                        <option value="191">191</option>
+                                        <option value="192">192</option>
+                                        <option value="193">193</option>
+                                        <option value="194">194</option>
+                                        <option value="195">195</option>
+                                        <option value="196">196</option>
+                                        <option value="197">197</option>
+                                        <option value="198">198</option>
+                                        <option value="199">199</option>
+                                        <option value="200">200</option>
+                                        <option value="201">201</option>
+                                        <option value="202">202</option>
+                                        <option value="203">203</option>
+                                        <option value="204">204</option>
+                                        <option value="205">205</option>
+                                    </select>
+                                </div>
+
+                                <div class="modal-form__section modal-form__section--column align-items-start ml-3">
+                                    <label class="modal-form__label" for="gradYear">Weight (kg)</label>
+                                    <div class="modal-form__input input input--contained mb-0">
+                                        <input type="weight" name="weight" placeholder="Enter weight">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-form__section modal-form__section--column align-items-start mb-3">
+                                <label class="modal-form__label" for="gradYear">Position:</label>
+                                <div class="modal-form__section justify-content-start">
+                                    <div class="modal-form__checkbox mr-5">
+                                        <input type="checkbox" id="forward">
+                                        <label class="ml-2" for="forward">Forward</label>
+                                    </div>
+                                    <div class="modal-form__checkbox mr-5">
+                                        <input type="checkbox" id="center">
+                                        <label class="ml-2" for="center">Center</label>
+                                    </div>
+                                    <div class="modal-form__checkbox mr-5">
+                                        <input type="checkbox" id="waterboy">
+                                        <label class="ml-2" for="waterboy">Waterboy</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-form__section modal-form__section--column align-items-start">
+                                <label class="modal-form__label" for="gradYear">Notes</label>
+                                <textarea   class="modal-form__textarea textarea" name="notes" 
+                                            id="notes" cols="10" rows="4" placeholder="Type some notes"></textarea>
+                            </div>
+                            <div class="modal-form__buttons mt-4">
+                                <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="button button--contained button--medium ml-auto">
+                                    Save & add new
+                                </button>
+                                <button type="button" class="button button--contained button--medium ml-2">
+                                    Save
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div  class="modal fade" id="removeAthleteModal" tabindex="-1" role="dialog" 
+              aria-labelledby="removeAthleteModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <div class="modal__section flex-column">
+                        <label class="modal__label">Are you sure you want to remove:</label>
+                        <span class="modal__big-text">John Snow</span>
+                      </div>
+                      <div class="modal__buttons-section">
+                        <button class="button button--ghost button--medium">No</button>
+                        <button class="button button--contained button--medium">Yes</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </body>
+</html> 
