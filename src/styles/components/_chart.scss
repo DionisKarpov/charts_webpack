@@ -48,7 +48,7 @@
 			&__actions {
 				//flex-direction: column;
 				flex-basis: 100%;
-				justify-content: center;
+				justify-content: flex-start;
 
 				span {
 					margin-left: 0;
@@ -121,7 +121,21 @@
 
 .chart-table {
 	display: flex;
-	//align-items: center;
-	//align-content: center;
-	//justify-content: center;
+}
+
+.link {
+	color: #293A5B;
+
+	&--center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:hover {
+		color: darken(#293A5B, 0.15);
+		text-decoration: none;
+	}
 }

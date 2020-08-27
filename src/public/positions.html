@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Charts</title>
+        <link rel="stylesheet" type="text/css" href="./../../dist/style.css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header">
+						<a class="header__back" href="/home.html">
+						
+						</a>
+            <div class="header__logo-container">
+                <span class="header__logo" alt="DeepChart.io Logo"></span>
+                <span class="header__logo-title">DeepChart.io</span>
+            </div>
+            <div class="header__buttons">
+                <button class="button button__profile" data-toggle="modal" data-target="#profileModal">
+                    <img src="./assets/image/noavatar.svg" width="100%" height="100%" alt="">
+                </button>
+            </div>
+        </header>
+        <main class="container-fluid athletes">
+            <div class="row flex-nowrap">
+                <nav class="menu positions__side-menu">
+                    <ul>
+                        <li><a href="/home.html">Depth Charts</a></li>
+                        <li><a href="/athletes.html">Athletes</a></li>
+                        <li><a class="active" href="/positions.html">Positions</a></li>
+                    </ul>
+                </nav>
+                <div class="positions__list-container">
+                    <div class="positions__list-head">
+                        <div class="positions__list-title">
+                            Positions List
+                        </div>
+                        <button class="button button--ghost button--medium" data-toggle="modal" data-target="#newAthleteModal">
+                            <span class="mr-2">+</span>
+                            Create position
+                        </button>
+                    </div>
+                    <ul class="positions__list">
+                        <li class="positions__item position">
+                            <div class="position__info">
+                              <div class="position__name">Forward</div>
+                              <div class="position__description">Description</div>
+                            </div>
+                            <div class="position__actions">
+                              <span class="position__notes" alt="Notes">
+                                <span class="position__tooltip">Notes</span>
+                              </span>
+                              <span class="position__edit" alt="Edit">
+                                <span class="position__tooltip">Edit</span>
+                              </span>
+                              <span class="position__remove" alt="Remove"
+                                    data-toggle="modal" data-target="#removePositionModal">
+                                <span class="position__tooltip">
+                                  Remove
+                                </span>
+                              </span>
+                            </div>
+                        </li>
+                        <li class="positions__item position">
+                            <div class="position__info">
+                                <div class="position__name">Center</div>
+                                <div class="position__description">Description</div>
+                            </div>
+                            <div class="position__actions">
+                                <span class="position__edit" alt="Edit">
+                                    <span class="position__tooltip">Edit</span>
+                                </span>
+                                <span class="position__remove" alt="Remove"
+                                      data-toggle="modal" data-target="#removePositionModal">
+                                    <span class="position__tooltip">
+                                      Remove
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="positions__item position">
+                            <div class="position__info">
+                                <div class="position__name">Waterboy</div>
+                                <div class="position__description">Position for Mr. Best if he doesn't work harder</div>
+                            </div>
+                            <div class="position__actions">
+                                <span class="position__edit" alt="Edit">
+                                    <span class="position__tooltip">Edit</span>
+                                </span>
+                                <span class="position__remove" alt="Remove"
+                                      data-toggle="modal" data-target="#removePositionModal">
+                                  <span class="position__tooltip">
+                                    Remove
+                                  </span>
+                              </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3 class="modal-title text-center">Profile</h3>
+                        <div class="modal-form">
+                            <div class="modal-form__avatar">
+                                <button type="button" class="button button--ghost button--medium">
+                                    Change Image
+                                </button>
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="name" name="name" placeholder="John Doe">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="Location" name="Location" placeholder="San Francisco, CA">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="mail" name="mail" placeholder="example@gmail.com">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="phone" name="phone" placeholder="1-555-555-5555">
+                            </div>
+                            <div class="modal-form__input input input--contained">
+                                <input type="password" name="password" placeholder="*****">
+                            </div>
+                            <button type="button" class="modal-form__login-button button button--contained button--medium mt-5">
+                                Save changes
+                            </button>
+                            <div class="modal-form__section">
+                                <button type="button" class="button button--ghost button--medium w-100" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="newAthleteModal" tabindex="-1" role="dialog" aria-labelledby="newAthleteModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog--medium" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3 class="modal-title text-center">New Position</h3>
+                        <div class="modal-form w-100">
+                            <div class="modal-form__input-container">
+                                <label class="modal-form__label" for="phone">Position name</label>
+                                <div class="modal-form__input input input--contained">
+                                    <input type="phone" name="phone" placeholder="Enter name">
+                                </div>
+                            </div>
+                            <div class="modal-form__section modal-form__section--column align-items-start">
+                                <label class="modal-form__label" for="gradYear">Description</label>
+                                <textarea   class="modal-form__textarea textarea" name="notes" 
+                                            id="notes" cols="10" rows="4" placeholder="Type position description"></textarea>
+                            </div>
+                            <div class="modal-form__buttons mt-4">
+                                <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="button button--contained button--medium ml-2">
+                                    Save
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div  class="modal fade" id="removePositionModal" tabindex="-1" role="dialog" 
+              aria-labelledby="removePositionModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <div class="modal__section flex-column">
+                        <label class="modal__label">Are you sure you want to remove:</label>
+                        <span class="modal__medium-text">Center</span>
+                      </div>
+                      <div class="modal__buttons-section">
+                        <button class="button button--ghost button--medium" data-dismiss="modal">No</button>
+                        <button class="button button--contained button--medium">Yes</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </body>
+</html> 

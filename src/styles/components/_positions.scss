@@ -1,5 +1,4 @@
-.athletes {
-	// margin-top: 60px;
+.positions {
 
 	&__side-menu {
 		height: calc(100vh - 60px);
@@ -30,7 +29,7 @@
 	}
 }
 
-.athlete {
+.position {
 	display: flex;
 	align-items: center;
 	flex-wrap: nowrap;
@@ -39,7 +38,7 @@
 	margin-bottom: 8px;
 	background: #F2F4F2;
 	border: 1px solid transparent;
-	//transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
 	border-radius: 5px;
 
 	&:last-child {
@@ -79,7 +78,7 @@
 		line-height: 20px;
 	}
 
-	&__year {
+	&__description {
 		color: #7e7e7e;
 		font-weight: 300;
 		font-size: 14px;
@@ -88,8 +87,7 @@
 	}
 
 	&__edit,
-	&__remove,
-	&__notes {
+	&__remove {
 		position: relative;
 		display: flex;
     align-items: center;
@@ -138,13 +136,6 @@
 
 		&:before {
 			background-image: url(../assets/image/remove.svg);
-		}
-	}
-
-	&__notes {
-
-		&:before {
-			background-image: url(../assets/image/notes.svg);
 		}
 	}
 
