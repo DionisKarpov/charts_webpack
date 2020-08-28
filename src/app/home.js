@@ -8,12 +8,6 @@ const swappable = new Swappable(document.querySelectorAll('.swappable'), {
 	draggable: 'li'
 });
 
-class TestClass {
-	
-	constructor() {
-			let msg = "Using ES2015+ syntax";
-			console.log(msg);
-	}
-}
+class TestClass {}
 
 let test = new TestClass();

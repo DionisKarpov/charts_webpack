@@ -1,5 +1,4 @@
 .athletes {
-	// margin-top: 60px;
 
 	&__side-menu {
 		height: calc(100vh - 60px);
@@ -39,8 +38,11 @@
 	margin-bottom: 8px;
 	background: #F2F4F2;
 	border: 1px solid transparent;
-	//transition: .15s ease-in-out;
 	border-radius: 5px;
+
+	&--empty {
+		background: #cbd4d4 !important;
+	}
 
 	&:last-child {
 		margin-bottom: 0;
@@ -89,7 +91,8 @@
 
 	&__edit,
 	&__remove,
-	&__notes {
+	&__notes,
+	&__more {
 		position: relative;
 		display: flex;
     align-items: center;
@@ -109,13 +112,26 @@
 			content: '';
 		}
 
+		&--small {
+			height: 32px;
+			width: 32px;
+			margin-right: 4px;
+			
+			&:before {
+				width: 16px;
+				height: 16px;
+			}
+		}
+
 		&:hover {
 			background-color: rgba(#293A5B, 0.1);
 			transition: .15s ease-in-out;
 
 			.athlete__tooltip {
 				opacity: 1;
-				transition: .3s ease-in-out !important;
+				visibility: visible;
+				transition: .5s ease-in-out !important;
+				z-index: 1;
 			}
 		}
 	}
@@ -148,6 +164,13 @@
 		}
 	}
 
+	&__more {
+
+		&:before {
+			background-image: url(../assets/image/more.svg);
+		}
+	}
+
 	&__tooltip {
 		position: absolute;
 		top: -32px;
@@ -160,6 +183,7 @@
 		letter-spacing: 0.2px;
 		border-radius: 5px;
 		opacity: 0;
-		transition: .3s ease-in-out;
+		visibility: visible;
+		z-index: -1;
 	}
 }
