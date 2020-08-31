@@ -9,6 +9,7 @@ module.exports = {
 		home: __dirname + "/src/app/home.js",
 		athletes: __dirname + "/src/app/athletes.js",
 		positions: __dirname + "/src/app/positions.js",
+		charts: __dirname + "/src/app/charts.js",
 	},
   output: {
     path: __dirname + '/dist',
@@ -87,6 +88,12 @@ module.exports = {
 				inject: true,
 				chunks: ['positions'],
 				filename: 'positions.html'
+			}),
+			new HtmlWebpackPlugin({
+				template: './src/public/charts.html',
+				inject: true,
+				chunks: ['charts'],
+				filename: 'charts.html'
 			}),
   ],
   devServer: { 
