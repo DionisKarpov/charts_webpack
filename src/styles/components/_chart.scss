@@ -40,6 +40,11 @@
 			flex-wrap: wrap;
 			padding: 10px;
 			border: 1px solid #8c8c8c;
+			background: #e2e4e2;
+
+			&:hover {
+				background: #c2c4c2;
+			}
 		}
 
 		.athlete {
@@ -92,9 +97,8 @@
 
 
 	li {
-		font-size: 15px;
-		color: #fff;
-		font-weight: bold;
+		font-size: 14px;
+		color: #454545 !important;
 		justify-content: center;
 		display: flex;
 		align-items: center;
@@ -102,17 +106,18 @@
 		width: 100%;
 		padding: 16px 24px;
 		margin-bottom: 8px;
-		background: #455a64;
+		background: #c1c1c1;
 		border: 1px solid transparent;
-		//transition: .15s ease-in-out;
 		border-radius: 5px;
+		transition: .15s ease-in-out;
 	}
 
 	.link {
-		color: #fff;
+		cursor: pointer;
 
 		&:hover {
-			color: inherit;
+			color: #8c8c8c !important;
+			transition: .15s ease-in-out;
 		}
 	}
 }
@@ -126,9 +131,8 @@
 	list-style: none;
 
 	li {
-		font-size: 15px;
-		color: #fff;
-		font-weight: bold;
+		font-size: 14px;
+		color: #454545 !important;
 		justify-content: center;
 		display: flex;
 		align-items: center;
@@ -136,10 +140,10 @@
 		width: 100%;
 		padding: 16px 24px;
 		margin-bottom: 8px;
-		background: #455a64;
+		background: #c1c1c1;
 		border: 1px solid transparent;
-		//transition: .15s ease-in-out;
 		border-radius: 5px;
+		transition: .15s ease-in-out;
 	}
 }
 

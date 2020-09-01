@@ -9,7 +9,7 @@
     </head>
     <body>
         <header class="header">
-						<a class="header__back" href="/home.html">
+						<a class="header__back" href="/chart.html">
 						
 						</a>
             <div class="header__logo-container">
@@ -26,7 +26,7 @@
             <div class="row flex-nowrap">
                 <nav class="menu athletes__side-menu">
                     <ul>
-                        <li><a href="/home.html">Depth Charts</a></li>
+                        <li><a href="/charts.html">Depth Charts</a></li>
                         <li><a class="active" href="/athletes.html">Athletes</a></li>
                         <li><a href="/positions.html">Positions</a></li>
                     </ul>
@@ -51,15 +51,18 @@
                               <div class="athlete__year">Grad year: 2020</div>
                             </div>
                             <div class="athlete__actions">
-                              <span class="athlete__edit" alt="Edit" data-toggle="modal" data-target="#newAthleteModal">
-                                <span class="athlete__tooltip">Edit</span>
-                              </span>
-                              <span class="athlete__remove" alt="Remove"
-                                    data-toggle="modal" data-target="#removeAthleteModal">
-                                <span class="athlete__tooltip">
-                                  Remove
+                                <span class="athlete__notes" alt="Notes" data-toggle="modal" data-target="#notesModal">
+                                    <span class="athlete__tooltip">Notes</span>
                                 </span>
-                              </span>
+                                <span class="athlete__edit" alt="Edit" data-toggle="modal" data-target="#newAthleteModal">
+                                    <span class="athlete__tooltip">Edit</span>
+                                </span>
+                                <span class="athlete__remove" alt="Remove"
+                                        data-toggle="modal" data-target="#removeAthleteModal">
+                                    <span class="athlete__tooltip">
+                                    Remove
+                                    </span>
+                                </span>
                             </div>
                         </li>
                         <li class="athletes__item athlete">
@@ -71,6 +74,9 @@
                                 <div class="athlete__year">Grad year: 2019</div>
                             </div>
                             <div class="athlete__actions">
+                                <span class="athlete__notes" alt="Notes" data-toggle="modal" data-target="#notesModal">
+                                    <span class="athlete__tooltip">Notes</span>
+                                </span>
                                 <span class="athlete__edit" alt="Edit" data-toggle="modal" data-target="#newAthleteModal">
                                     <span class="athlete__tooltip">Edit</span>
                                 </span>
@@ -91,6 +97,9 @@
                                 <div class="athlete__year">Grad year: 2018</div>
                             </div>
                             <div class="athlete__actions">
+                                <span class="athlete__notes" alt="Notes" data-toggle="modal" data-target="#notesModal">
+                                    <span class="athlete__tooltip">Notes</span>
+                                </span>
                                 <span class="athlete__edit" alt="Edit" data-toggle="modal" data-target="#newAthleteModal">
                                     <span class="athlete__tooltip">Edit</span>
                                 </span>
@@ -273,7 +282,6 @@
                                     Save
                                 </button>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -290,12 +298,33 @@
                         <span class="modal__big-text">John Snow</span>
                       </div>
                       <div class="modal__buttons-section">
-                        <button class="button button--ghost button--medium">No</button>
+                        <button class="button button--ghost button--medium" data-dismiss="modal">No</button>
                         <button class="button button--contained button--medium">Yes</button>
                       </div>
                   </div>
               </div>
           </div>
-      </div>
+        </div>
+
+        <div  class="modal fade" id="notesModal" tabindex="-1" role="dialog" 
+              aria-labelledby="notesModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog--large" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <label class="modal__label">John Snow Notes:</label>
+                        <textarea   class="modal-form__textarea textarea textarea--big" name="notes" 
+                                    id="notes" cols="10" rows="4" placeholder="Type some notes">Jon Snow love Daenerys Mother of Dragons and have one big wolf</textarea>
+                        <div class="modal-form__buttons mt-2">
+                            <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="button button--contained button--medium ml-auto">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html> 

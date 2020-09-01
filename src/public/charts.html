@@ -9,9 +9,7 @@
     </head>
     <body>
         <header class="header">
-						<a class="header__back" href="/home.html">
-						
-						</a>
+            <a class="header__home" href="/index.html">Home</a>
             <div class="header__logo-container">
                 <span class="header__logo" alt="DeepChart.io Logo"></span>
                 <span class="header__logo-title">DeepChart.io</span>
@@ -42,10 +40,116 @@
                         </button>
                     </div>
                     <ul class="charts__list">
-											<li class="charts__item chart-item"></li>
-											<li class="charts__item chart-item"></li> 
-											<li class="charts__item chart-item"></li> 
-											<li class="charts__item chart-item"></li> 
+                        <li class="charts__item chart-item">
+                            <div class="chart-item__top">
+                                <div class="chart-item__team-icon" alt="Team icon"></div>
+                            </div>
+                            <div class="chart-item__bottom">
+                                <div class="chart-item__name">
+                                    %Chart.Name%
+                                </div>
+                                <div class="chart-item__actions">
+                                    <a  class="chart-item__edit chart-item__edit--small ml-0" 
+                                        alt="Edit" href="/chart.html">
+                                        <span class="chart-item__tooltip">Edit</span>
+                                    </a>
+                                    <span class="chart-item__remove chart-item__remove--small" alt="Remove"
+                                            data-toggle="modal" data-target="#removeChartModal">
+                                        <span class="chart-item__tooltip">
+                                            Remove
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="charts__item chart-item">
+                            <div class="chart-item__top">
+                                <div class="chart-item__team-icon" alt="Team icon"></div>
+                            </div>
+                            <div class="chart-item__bottom">
+                                <div class="chart-item__name">
+                                    %Chart.Name%
+                                </div>
+                                <div class="chart-item__actions">
+                                    <a  class="chart-item__edit chart-item__edit--small ml-0" 
+                                        alt="Edit" href="/chart.html">
+                                        <span class="chart-item__tooltip">Edit</span>
+                                    </a>
+                                    <span class="chart-item__remove chart-item__remove--small" alt="Remove"
+                                            data-toggle="modal" data-target="#removeChartModal">
+                                        <span class="chart-item__tooltip">
+                                            Remove
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="charts__item chart-item">
+                            <div class="chart-item__top">
+                                <div class="chart-item__team-icon" alt="Team icon"></div>
+                            </div>
+                            <div class="chart-item__bottom">
+                                <div class="chart-item__name">
+                                    %Chart.Name%
+                                </div>
+                                <div class="chart-item__actions">
+                                    <a  class="chart-item__edit chart-item__edit--small ml-0" 
+                                        alt="Edit" href="/chart.html">
+                                        <span class="chart-item__tooltip">Edit</span>
+                                    </a>
+                                    <span class="chart-item__remove chart-item__remove--small" alt="Remove"
+                                            data-toggle="modal" data-target="#removeChartModal">
+                                        <span class="chart-item__tooltip">
+                                            Remove
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="charts__item chart-item">
+                            <div class="chart-item__top">
+                                <div class="chart-item__team-icon" alt="Team icon"></div>
+                            </div>
+                            <div class="chart-item__bottom">
+                                <div class="chart-item__name">
+                                    %Chart.Name%
+                                </div>
+                                <div class="chart-item__actions">
+                                    <a  class="chart-item__edit chart-item__edit--small ml-0" 
+                                        alt="Edit" href="/chart.html">
+                                        <span class="chart-item__tooltip">Edit</span>
+                                    </a>
+                                    <span class="chart-item__remove chart-item__remove--small" alt="Remove"
+                                            data-toggle="modal" data-target="#removeChartModal">
+                                        <span class="chart-item__tooltip">
+                                            Remove
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="charts__item chart-item">
+                            <div class="chart-item__top">
+                                <div class="chart-item__team-icon" alt="Team icon"></div>
+                            </div>
+                            <div class="chart-item__bottom">
+                                <div class="chart-item__name">
+                                    %Chart.Name%
+                                </div>
+                                <div class="chart-item__actions">
+                                    <a  class="chart-item__edit chart-item__edit--small ml-0" 
+                                        alt="Edit" href="/chart.html">
+                                        <span class="chart-item__tooltip">Edit</span>
+                                    </a>
+                                    <span class="chart-item__remove chart-item__remove--small" alt="Remove"
+                                            data-toggle="modal" data-target="#removeChartModal">
+                                        <span class="chart-item__tooltip">
+                                            Remove
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -92,154 +196,57 @@
         </div>
 
         <div class="modal fade" id="chartModal" tabindex="-1" role="dialog" aria-labelledby="chartModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog--large" role="document">
+            <div class="modal-dialog modal-dialog--medium" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <h3 class="modal-title text-center">New Athlete</h3>
+                        <h3 class="modal-title text-center">New chart</h3>
                         <div class="modal-form w-100">
-                            <div class="modal-form__section align-items-start">
-                                <div class="modal-form__avatar my-0 mr-4 modal-form__avatar--square"></div>
-                                <div class="modal-form__section modal-form__section--column">
-                                    <div class="modal-form__input-container">
-                                        <label class="modal-form__label" for="firstName">First Name</label>
-                                        <div class="modal-form__input input input--contained">
-                                            <input type="name" name="firstName" placeholder="First name">
-                                        </div>
-                                    </div>
-                                    <div class="modal-form__input-container">
-                                        <label class="modal-form__label" for="lastName">Last Name</label>
-                                        <div class="modal-form__input input input--contained">
-                                            <input type="name" name="lastName" placeholder="Last name">
-                                        </div>
-                                    </div>
-                                    <div class="modal-form__input-container">
-                                        <label class="modal-form__label" for="email">Email</label>
-                                        <div class="modal-form__input input input--contained">
-                                            <input type="email" name="email" placeholder="Email">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="modal-form__input-container">
-                                <label class="modal-form__label" for="phone">Phone Number</label>
+                                <label class="modal-form__label" for="phone">Chart name</label>
                                 <div class="modal-form__input input input--contained">
-                                    <input type="phone" name="phone" placeholder="Enter phone">
-                                </div>
-                            </div>
-                            <div class="modal-form__input-container">
-                                <label class="modal-form__label" for="school">School</label>
-                                <div class="modal-form__input input input--containe">
-                                    <input type="text" name="school" placeholder="Enter school">
-                                </div>
-                            </div>
-                            <div class="modal-form__section flex-nowrap mb-3">
-                                <div class="modal-form__section modal-form__section--column align-items-start">
-                                    <label class="modal-form__label" for="gradYear">Grad year</label>
-                                    <select class="modal-form__select select w-100" name="gradYear" id="gradYear">
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="modal-form__section modal-form__section--column align-items-start ml-3">
-                                    <label class="modal-form__label" for="height">Height</label>
-                                    <select class="modal-form__select select w-100" name="height" id="height">
-                                        <option value="180">180</option>
-                                        <option value="181">181</option>
-                                        <option value="182">182</option>
-                                        <option value="183">183</option>
-                                        <option value="184">184</option>
-                                        <option value="185">185</option>
-                                        <option value="186">186</option>
-                                        <option value="187">187</option>
-                                        <option value="188">188</option>
-                                        <option value="189">189</option>
-                                        <option value="190">190</option>
-                                        <option value="191">191</option>
-                                        <option value="192">192</option>
-                                        <option value="193">193</option>
-                                        <option value="194">194</option>
-                                        <option value="195">195</option>
-                                        <option value="196">196</option>
-                                        <option value="197">197</option>
-                                        <option value="198">198</option>
-                                        <option value="199">199</option>
-                                        <option value="200">200</option>
-                                        <option value="201">201</option>
-                                        <option value="202">202</option>
-                                        <option value="203">203</option>
-                                        <option value="204">204</option>
-                                        <option value="205">205</option>
-                                    </select>
-                                </div>
-
-                                <div class="modal-form__section modal-form__section--column align-items-start ml-3">
-                                    <label class="modal-form__label" for="weight">Weight (kg)</label>
-                                    <div class="modal-form__input input input--contained mb-0">
-                                        <input type="weight" name="weight" placeholder="Enter weight">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-form__section modal-form__section--column align-items-start mb-3">
-                                <label class="modal-form__label" for="gradYear">Position:</label>
-                                <div class="modal-form__section justify-content-start">
-                                    <div class="modal-form__checkbox mr-5">
-                                        <input type="checkbox" id="forward">
-                                        <label class="ml-2" for="forward">Forward</label>
-                                    </div>
-                                    <div class="modal-form__checkbox mr-5">
-                                        <input type="checkbox" id="center">
-                                        <label class="ml-2" for="center">Center</label>
-                                    </div>
-                                    <div class="modal-form__checkbox mr-5">
-                                        <input type="checkbox" id="waterboy">
-                                        <label class="ml-2" for="waterboy">Waterboy</label>
-                                    </div>
+                                    <input type="name" name="name" placeholder="Enter name">
                                 </div>
                             </div>
                             <div class="modal-form__section modal-form__section--column align-items-start">
-                                <label class="modal-form__label" for="notes">Notes</label>
-                                <textarea   class="modal-form__textarea textarea" name="notes" 
-                                            id="notes" cols="10" rows="4" placeholder="Type some notes"></textarea>
+                                <label class="modal-form__label" for="gradYear">Chart type</label>
+                                <select class="modal-form__select select w-100" name="gradYear" id="gradYear">
+                                    <option value="football">Football</option>
+                                    <option value="basketball">Basketball</option>
+                                    <option value="baseball">Baseball</option>
+                                    <option value="soccer">Soccer</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
                             <div class="modal-form__buttons mt-4">
                                 <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
                                     Close
                                 </button>
                                 <button type="button" class="button button--contained button--medium ml-auto">
-                                    Save & add new
-                                </button>
-                                <button type="button" class="button button--contained button--medium ml-2">
-                                    Save
+                                    Create
                                 </button>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div  class="modal fade" id="removeAthleteModal" tabindex="-1" role="dialog" 
-              aria-labelledby="removeAthleteModal" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-body">
-                      <div class="modal__section flex-column">
-                        <label class="modal__label">Are you sure you want to remove:</label>
-                        <span class="modal__big-text">John Snow</span>
-                      </div>
-                      <div class="modal__buttons-section">
-                        <button class="button button--ghost button--medium">No</button>
-                        <button class="button button--contained button--medium">Yes</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+        <div  class="modal fade" id="removeChartModal" tabindex="-1" role="dialog" 
+              aria-labelledby="removeChartModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal__section flex-column">
+                            <label class="modal__label">Are you sure you want to remove:</label>
+                            <span class="modal__big-text">%Chart.Name%</span>
+                        </div>
+                        <div class="modal__buttons-section">
+                            <button class="button button--ghost button--medium" data-dismiss="modal">No</button>
+                            <button class="button button--contained button--medium">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html> 

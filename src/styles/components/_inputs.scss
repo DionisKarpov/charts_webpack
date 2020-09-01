@@ -58,4 +58,8 @@
 
 .textarea {
 	resize: none;
+
+	&--big {
+		height: 250px;
+	}
 }
