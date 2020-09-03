@@ -41,7 +41,7 @@ module.exports = {
 							loader: 'file-loader',
 							options: {
 								query: {
-									name:'assets/[name].[ext]'
+									name:'[path][name].[ext]'
 								}
 							}
 						},
@@ -61,7 +61,7 @@ module.exports = {
 								}
 							}
 						}]
-				} 
+				}
       ]
   },
   plugins: [ 

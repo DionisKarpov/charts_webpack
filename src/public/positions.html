@@ -36,7 +36,11 @@
                         <div class="positions__list-title">
                             Positions List
                         </div>
-                        <button class="button button--ghost button--medium" data-toggle="modal" data-target="#newAthleteModal">
+                        <button class="button button--ghost button--medium ml-auto" data-toggle="modal" data-target="#commonPositionModal">
+                            <span class="mr-2">+</span>
+                            Populate Common Positions
+                        </button>
+                        <button class="button button--ghost button--medium" data-toggle="modal" data-target="#newPositionModal">
                             <span class="mr-2">+</span>
                             Create position
                         </button>
@@ -141,7 +145,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="newAthleteModal" tabindex="-1" role="dialog" aria-labelledby="newAthleteModal" aria-hidden="true">
+        <div class="modal fade" id="newPositionModal" tabindex="-1" role="dialog" aria-labelledby="newPositionModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog--medium" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -167,6 +171,47 @@
                                 </button>
                             </div>
                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="commonPositionModal" tabindex="-1" role="dialog" aria-labelledby="commonPositionModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog--medium" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3 class="modal-title text-center">Populate Common Positions</h3>
+                        <div class="modal-form w-100">
+                            <div class="modal-form__section modal-form__section--column common-list">
+                                <div class="common-list__item">
+                                    <div class="common-list__item-name">
+                                        Basketball
+                                    </div>
+                                </div>
+                                <div class="common-list__item">
+                                    <div class="common-list__item-name">
+                                        Baseball
+                                    </div>
+                                </div>
+                                <div class="common-list__item common-list__item--chosen">
+                                    <div class="common-list__item-name">
+                                        Soccer
+                                    </div>
+                                    <div class="common-list__item-section">
+                                        <span class="common-list__item-section-button mr-3">Offence</span>
+                                        <span class="common-list__item-section-button">Defence</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-form__buttons mt-4">
+                                <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="button button--contained button--medium ml-2">
+                                    Add All Position
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
