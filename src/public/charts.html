@@ -19,15 +19,15 @@
             </div>
         </header>
         <main class="container-fluid athletes">
-            <div class="row flex-nowrap">
-                <nav class="menu charts__side-menu">
+            <div class="row main__container">
+                <nav class="menu">
                     <ul>
                         <li><a class="active" href="/charts.html">Depth Charts</a></li>
                         <li><a href="/athletes.html">Athletes</a></li>
                         <li><a href="/positions.html">Positions</a></li>
                         <!-- temporary -->
                         <li>
-                            <button class="button button--ghost button--medium mt-5 ml-5" data-toggle="modal" data-target="#guideTourModal">% Guide Tour %</button>
+                            <button class="button button--ghost button--medium mt-2 ml-5" data-toggle="modal" data-target="#guideTourModal">% Guide Tour %</button>
                         </li>
                         <!-- temporary -->
                     </ul>
@@ -43,7 +43,7 @@
                         </button>
                     </div>
                     <ul class="charts__list">
-                        <li class="charts__item chart-item">
+                        <li class="charts__item chart-item" onclick="location.href='/chart.html'">
                             <div class="chart-item__top">
                                 <div class="chart-item__team-icon" alt="Team icon"></div>
                             </div>
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="charts__item chart-item">
+                        <li class="charts__item chart-item" onclick="location.href='/chart.html'">
                             <div class="chart-item__top">
                                 <div class="chart-item__team-icon" alt="Team icon"></div>
                             </div>
@@ -87,7 +87,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="charts__item chart-item">
+                        <li class="charts__item chart-item" onclick="location.href='/chart.html'">
                             <div class="chart-item__top">
                                 <div class="chart-item__team-icon" alt="Team icon"></div>
                             </div>
@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="charts__item chart-item">
+                        <li class="charts__item chart-item" onclick="location.href='/chart.html'">
                             <div class="chart-item__top">
                                 <div class="chart-item__team-icon" alt="Team icon"></div>
                             </div>
@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="charts__item chart-item">
+                        <li class="charts__item chart-item" onclick="location.href='/chart.html'">
                             <div class="chart-item__top">
                                 <div class="chart-item__team-icon" alt="Team icon"></div>
                             </div>
@@ -210,14 +210,23 @@
                                     <input type="name" name="name" placeholder="Enter name">
                                 </div>
                             </div>
-                            <div class="modal-form__section modal-form__section--column align-items-start">
-                                <label class="modal-form__label" for="gradYear">Chart type</label>
-                                <select class="modal-form__select select w-100" name="gradYear" id="gradYear">
+                            <div class="modal-form__section modal-form__section--column align-items-start mb-2">
+                                <label class="modal-form__label" for="type">Chart type</label>
+                                <select class="modal-form__select select w-100" name="type" id="type">
                                     <option value="football">Football</option>
                                     <option value="basketball">Basketball</option>
                                     <option value="baseball">Baseball</option>
                                     <option value="soccer">Soccer</option>
                                     <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="modal-form__section modal-form__section--column align-items-start">
+                                <label class="modal-form__label" for="school">School</label>
+                                <select class="modal-form__select select w-100" name="school" id="school" placeholder="Choose school">
+                                    <option value="" selected>Choose school...</option>
+                                    <option value="one">First School</option>
+                                    <option value="two">Second School</option>
+                                    <option value="three">Third School</option>
                                 </select>
                             </div>
                             <div class="modal-form__buttons mt-4">
@@ -265,17 +274,20 @@
                                 <label class="modal-form__label">Step 1: Create Positions for your Depth Chart</label>
                                 <div class="modal-form__guide-step modal-form__guide-step--first"></div>
                             </div>
-                            <div class="modal-form__section modal-form__section--column">
+                            <!-- temporary -->
+                            <!-- <div class="modal-form__section modal-form__section--column">
                                 <label class="modal-form__label">Step 2: Populate common positions for your Depth Chart</label>
                                 <div class="modal-form__guide-step modal-form__guide-step--second"></div>
                             </div>
                             <div class="modal-form__section modal-form__section--column">
                                 <label class="modal-form__label">Step 3: Create athletes for your Depth Chart</label>
                                 <div class="modal-form__guide-step modal-form__guide-step--third"></div>
-                            </div>
+                            </div> -->
+                            <!-- temporary -->
                         </div>
                         <div class="modal__buttons-section">
-                            <button class="button button--ghost button--medium ml-auto" data-dismiss="modal">Close</button>
+                            <button class="button button--ghost button--medium" data-dismiss="modal">Close</button>
+                            <button class="button button--contained button--medium ml-auto">Next (should be step 2/3, now commented in code)</button>
                         </div>
                     </div>
                 </div>

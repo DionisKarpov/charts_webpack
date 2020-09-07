@@ -1,6 +1,11 @@
 .main {
 	position: relative;
 
+	&__container {
+		flex-wrap: nowrap;
+		margin: 0;
+	}
+
 	&__start-page {
 		display: flex;
 		align-items: center;
@@ -122,4 +127,14 @@
 	left: 50%;
 	transform: translate(-50%,-50%) !important;
 	margin: 0 !important;
+}
+
+@media screen and (max-width: 900px) {
+
+	.main {
+
+		&__container {
+			flex-direction: column;
+		}
+	}
 }

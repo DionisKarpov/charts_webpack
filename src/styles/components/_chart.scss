@@ -34,56 +34,6 @@
 				background: #d9d9d9;
 			}
 		}
-
-		&.athlete {
-			align-items: flex-start;
-			flex-wrap: wrap;
-			padding: 10px;
-			border: 1px solid #8c8c8c;
-			background: #e2e4e2;
-
-			&:hover {
-				background: #c2c4c2;
-			}
-		}
-
-		.athlete {
-
-			&__info {
-				margin-right: 0;
-			}
-
-			&__actions {
-				flex-basis: 100%;
-				justify-content: flex-end;
-				margin-top: auto;
-
-				span {
-					margin-left: 0;
-				}
-			}
-
-			&__avatar {
-				width: 26px;
-				height: 26px;
-				min-height: 26px;
-				min-width: 26px;
-				margin-right: 8px;
-			}
-
-			&__name {
-				margin-bottom: 4px;
-				font-size: 14px;
-				letter-spacing: 0.2px;
-				line-height: 16px;
-			}
-		
-			&__card-info {
-				font-size: 12px;
-				letter-spacing: 0.2px;
-				line-height: 14px;
-			}
-		}
 	}
 }
 
@@ -165,5 +115,149 @@
 	&:hover {
 		color: darken(#293A5B, 0.15);
 		text-decoration: none;
+	}
+}
+
+.athlete-chart {
+	display: flex;
+	flex-wrap: nowrap;	
+	padding: 10px;
+	border: 1px solid #8c8c8c;
+	background: #e2e4e2;
+	border-radius: 5px;
+
+	&:hover {
+		background: #c2c4c2;
+	}
+
+	&__left {
+		margin-right: 10px;
+	}
+
+	&__right {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	&__year {
+		margin-bottom: 4px;
+		font-size: 16px;
+		letter-spacing: 0.2px;
+		line-height: 18px;
+	}
+
+	&__name {
+		margin-bottom: 4px;
+		font-size: 14px;
+		letter-spacing: 0.2px;
+		line-height: 16px;
+	}
+
+	&__card-info {
+		font-size: 12px;
+    letter-spacing: 0.2px;
+		line-height: 14px;
+		color: #7e7e7e;
+    font-weight: 300;
+	}
+
+	&__avatar {
+		max-width: 80px;
+		max-height: 80px;
+		min-width: 80px;
+		min-height: 80px;
+		margin-top: 4px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			border-radius: 4px;
+		}
+	}
+
+	&__remove,
+	&__info-icon {
+		position: relative;
+		display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+		transition: .15s ease-in-out;
+		cursor: pointer;
+		
+		&:before  {
+			width: 18px;
+			height: 18px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+		}
+
+		&--small {
+			height: 28px;
+			width: 28px;
+			margin-right: 2px;
+			
+			&:before {
+				width: 14px;
+				height: 14px;
+			}
+		}
+
+		&:hover {
+			background-color: rgba(#293A5B, 0.1);
+			transition: .15s ease-in-out;
+
+			.athlete-chart__tooltip {
+				opacity: 1;
+				visibility: visible;
+				transition: .5s ease-in-out !important;
+				z-index: 1;
+			}
+		}
+	}
+
+	&__actions {
+		display: flex;
+		margin-left: auto;
+	}
+
+	&__remove {
+		margin-left: 8px;
+
+		&:before {
+			background-image: url(../assets/image/remove.svg);
+		}
+	}
+
+	&__info-icon {
+
+		&:before {
+			background-image: url(../assets/image/info.svg);
+		}
+	}
+
+	&__tooltip {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		padding: 4px 8px;
+		transform: translateX(-50%);
+		background: rgba(#7e7e7e, 0.95);
+		color: #fff;
+		font-size: 14px;
+		letter-spacing: 0.2px;
+		border-radius: 5px;
+		opacity: 0;
+		visibility: visible;
+		z-index: -1;
+		white-space: nowrap;
 	}
 }
