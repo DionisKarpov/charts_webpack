@@ -140,7 +140,7 @@
 	}
 
 	&__left {
-		margin-right: 10px;
+		margin-right: 8px;
 	}
 
 	&__right {
@@ -153,15 +153,15 @@
 
 	&__year {
 		margin-bottom: 4px;
-		font-size: 16px;
-		letter-spacing: 0.2px;
+		font-size: 14px;
+		letter-spacing: 0px;
 		line-height: 18px;
 	}
 
 	&__name {
 		margin-bottom: 4px;
 		font-size: 14px;
-		letter-spacing: 0.2px;
+		letter-spacing: 0px;
 		line-height: 16px;
 	}
 
@@ -212,7 +212,6 @@
 		&--small {
 			height: 28px;
 			width: 28px;
-			margin-right: 2px;
 			
 			&:before {
 				width: 14px;
@@ -239,7 +238,6 @@
 	}
 
 	&__remove {
-		margin-left: 8px;
 
 		&:before {
 			background-image: url(../assets/image/remove.svg);
