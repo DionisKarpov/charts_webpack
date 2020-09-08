@@ -85,7 +85,7 @@
 	grid-template-columns: repeat(4, 25% [col-start]);
 	column-gap: 5px;
 	padding: 0;
-	margin: 0 5px 0 0;
+	margin: 0;
 	list-style: none;
 
 	li {
@@ -98,7 +98,7 @@
 		flex-wrap: nowrap;
 		width: 100%;
 		padding: 16px 24px;
-		margin-bottom: 8px;
+		margin-bottom: 5px;
 		background: #c1c1c1;
 		border: 1px solid transparent;
 		border-radius: 5px;
