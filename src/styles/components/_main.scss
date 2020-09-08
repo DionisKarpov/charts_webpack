@@ -129,6 +129,16 @@
 	margin: 0 !important;
 }
 
+@media screen and (max-width: 1280px) {
+	
+	.main {
+
+		&__chart-page {
+			width: calc(100% - 140px);
+		}
+	}
+}
+
 @media screen and (max-width: 900px) {
 
 	.main {
