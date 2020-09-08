@@ -335,6 +335,7 @@ section {
     font-size: 15px;
     text-transform: uppercase;
     transition: .15s ease-in-out;
+    white-space: nowrap;
 
     &:hover {
       text-decoration: none;

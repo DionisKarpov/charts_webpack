@@ -6,16 +6,15 @@
         <link rel="stylesheet" type="text/css" href="./../../dist/style.css" media="screen" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1">
     </head>
     <body>
         <header class="header">
-						<a class="header__back" href="/chart.html">
-						
-						</a>
-            <div class="header__logo-container">
+            <a class="header__home" href="/charts.html">Home</a>
+            <a class="header__logo-container" href="/index.html">
                 <span class="header__logo" alt="DeepChart.io Logo"></span>
                 <span class="header__logo-title">DeepChart.io</span>
-            </div>
+            </a>
             <div class="header__buttons">
                 <button class="button button__profile" data-toggle="modal" data-target="#profileModal"></button>
             </div>
@@ -160,7 +159,7 @@
                     <div class="modal-body">
                         <h3 class="modal-title text-center">New Athlete</h3>
                         <div class="modal-form w-100">
-                            <div class="modal-form__section align-items-start">
+                            <div class="modal-form__section modal-form__section--athlete-first">
                                 <div class="modal-form__avatar my-0 mr-4 modal-form__avatar--square"></div>
                                 <div class="modal-form__section modal-form__section--column">
                                     <div class="modal-form__input-container">
@@ -249,7 +248,7 @@
                             </div>
                             <div class="modal-form__section modal-form__section--column align-items-start mb-3">
                                 <label class="modal-form__label" for="gradYear">Position:</label>
-                                <div class="modal-form__section justify-content-start">
+                                <div class="modal-form__section modal-form__section--checkboxes justify-content-start">
                                     <div class="modal-form__checkbox mr-5">
                                         <input type="checkbox" id="forward">
                                         <label class="ml-2" for="forward">Forward</label>
@@ -269,17 +268,17 @@
                                 <textarea   class="modal-form__textarea textarea" name="notes" 
                                             id="notes" cols="10" rows="4" placeholder="Type some notes"></textarea>
                             </div>
-                            <div class="modal-form__buttons mt-4">
-                                <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
-                                    Close
-                                </button>
-                                <button type="button" class="button button--contained button--medium ml-auto">
-                                    Save & add new
-                                </button>
-                                <button type="button" class="button button--contained button--medium ml-2">
-                                    Save
-                                </button>
-                            </div>
+                        </div>
+                        <div class="modal-form__buttons mt-4">
+                            <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="button button--contained button--medium ml-auto">
+                                Save & add new
+                            </button>
+                            <button type="button" class="button button--contained button--medium ml-2">
+                                Save
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -16,20 +16,31 @@
 
 		.modal-form {
 			max-height: 700px;
-			overflow-y: scroll;
+			overflow-y: auto;
+			overflow-x: hidden;
 
 			&::-webkit-scrollbar {
-				background-color: transparent !important;
 				width: 2px !important;
+				border-radius: 4px !important;
 			}
 		
+			&::-webkit-scrollbar-track {
+				background: #eee !important;
+			}
+		
+		
 			&::-webkit-scrollbar-thumb {
-				background-color: #8c8c8c !important;
-				border-radius: 2px !important;
+				background: #888  !important;
+			}
+		
+			&::-webkit-scrollbar-thumb:hover {
+				background: #555  !important;
 			}
 		}
 	}
 }
+
+
 
 .modal-body {
 	background: #fff;
@@ -40,7 +51,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 450px;
+	width: 100%;
 
 	&__logo {
 		min-width: 64px;
@@ -81,8 +92,16 @@
 		justify-content: center;
 		width: 100%;
 
+		&--checkboxes {
+			flex-direction: row !important;
+		}
+
 		&--column {
 			flex-direction: column;
+		}
+
+		&--athlete-first {
+			align-items: flex-start;
 		}
 	}
 
@@ -287,5 +306,71 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	
+	.modal-dialog {
+		max-width: calc(100vw - 48px);
+		width: calc(100vw - 48px);
+
+		&--large {
+			max-width: calc(100vw - 48px);
+			width: calc(100vw - 48px);
+		}
+	
+		&--guide {
+	
+			.modal-form {
+				max-width: calc(100vw - 48px);
+				width: calc(100vw - 48px);
+				padding-right: 4px;
+			}
+		}
+	}
+
+	.modal-form {
+		max-height: calc(100vh - 200px);
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 4px;
+
+		&::-webkit-scrollbar {
+			width: 2px !important;
+			border-radius: 4px !important;
+		}
+	
+		&::-webkit-scrollbar-track {
+			background: #eee !important;
+		}
+	
+	
+		&::-webkit-scrollbar-thumb {
+			background: #888  !important;
+		}
+	
+		&::-webkit-scrollbar-thumb:hover {
+			background: #555  !important;
+		}
+		
+		&__section {
+			flex-direction: column;
+
+			&--athlete-first {
+				align-items: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	.modal-dialog {
+	
+		&--medium {
+			max-width: calc(100vw - 48px);
+			width: calc(100vw - 48px);
+		}
 	}
 }

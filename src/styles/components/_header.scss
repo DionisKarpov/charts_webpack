@@ -16,7 +16,10 @@
 		font-size: 14px;
 		letter-spacing: 0.2px;
 
-		&:hover {
+		&:hover,
+		&:active,
+		&:focus,
+		&:focus-within {
 			text-decoration: none;
 		}
 	}
@@ -28,6 +31,9 @@
 		transform: translate(-50%,-50%);
 		display: flex;
 		align-items: center;
+		text-decoration: none;
+		color: #293A5B;
+		cursor: pointer;
 	}
 
 	&__logo {
@@ -67,5 +73,11 @@
 			background-color: rgba(#293A5B, 0.1);
 			transition: .15s ease-in-out;
 		}
+	}
+
+	&__buttons {
+		display: flex;
+    justify-content: flex-end;
+    width: 100%;
 	}
 }
