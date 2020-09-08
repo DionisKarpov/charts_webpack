@@ -37,6 +37,10 @@
 	}
 }
 
+.chart-table._head .side-positions {
+    grid-template-rows: repeat(1, 70px [col-start]);
+}
+
 .side-positions {
 	display: grid;
 	grid-template-rows: repeat(5, 500px [col-start]);
@@ -45,21 +49,25 @@
 	margin: 0 5px 0 0;
 	list-style: none;
 
-
 	li {
+		width: 150px;
 		font-size: 14px;
 		color: #454545 !important;
 		justify-content: center;
 		display: flex;
 		align-items: center;
 		flex-wrap: nowrap;
-		width: 100%;
+		//width: 100%;
 		padding: 16px 24px;
 		margin-bottom: 8px;
 		background: #c1c1c1;
 		border: 1px solid transparent;
 		border-radius: 5px;
 		transition: .15s ease-in-out;
+
+		._head & {
+			height: 70px;
+		}
 	}
 
 	.link {
@@ -81,6 +89,7 @@
 	list-style: none;
 
 	li {
+		height: 70px;
 		font-size: 14px;
 		color: #454545 !important;
 		justify-content: center;
