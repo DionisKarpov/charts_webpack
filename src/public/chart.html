@@ -604,13 +604,16 @@
             '.side-positions {\n' +
             '    grid-template-rows: repeat(5, ' + height + 'px [col-start]);\n' +
             '}\n' +
-            '.chart-table._head .side-positions {\n' +
-            '    grid-template-rows: repeat(1, ' + height + 'px [col-start]);\n' +
+            '.side-positions li {\n' +
+            '    height: ' + height + 'px;\n' +
             '}\n' +
             '.top-positions {\n' +
             '    grid-template-columns: repeat(4, ' + width + 'px [col-start]);\n' +
             '}\n' +
-            '.chart-table .swappable li, .side-positions li, .top-positions li {\n' +
+            '.top-positions li {\n' +
+            '    width: ' + width + 'px;\n' +
+            '}\n' +
+            '.chart-table .swappable li {\n' +
             '    width: ' + width + 'px;\n' +
             '    height: ' + height + 'px;\n' +
             '}';
