@@ -1,7 +1,7 @@
 .swappable {
 	display: grid;
 	grid-template-columns: repeat(4, 25% [col-start]);
-	grid-template-rows: repeat(5, 20% [col-start]);
+	grid-template-rows: repeat(5, 124px [col-start]);
 	column-gap: 5px;
 	row-gap: 5px;
 	padding: 0;
@@ -11,6 +11,7 @@
 	li {
 		width: 100%;
 		height: 100%;
+		min-height: 124px;
 
 		&:hover {
 			background: #d9d9d9;
@@ -50,6 +51,7 @@
 	list-style: none;
 
 	li {
+		position: relative;
 		width: 150px;
 		font-size: 14px;
 		color: #454545 !important;
@@ -57,7 +59,6 @@
 		display: flex;
 		align-items: center;
 		flex-wrap: nowrap;
-		//width: 100%;
 		padding: 16px 24px;
 		margin-bottom: 8px;
 		background: #c1c1c1;
@@ -76,6 +77,38 @@
 		&:hover {
 			color: #8c8c8c !important;
 			transition: .15s ease-in-out;
+		}
+	}
+
+	.color-picker {
+		position: absolute;
+		bottom: 4px;
+		right: 4px;
+		max-height: 24px;
+		border-radius: 5px;
+		overflow: hidden;
+
+		input {
+			width: 24px;
+			height: 24px;
+			padding: 0;
+			border: none;
+			box-shadow: none;
+			outline: none;
+			background: none;
+		}
+
+		input[type="color"] {
+			-webkit-appearance: none;
+			border: none;
+			width: 24px;
+			height: 24px;
+		}
+		input[type="color"]::-webkit-color-swatch-wrapper {
+			padding: 0;
+		}
+		input[type="color"]::-webkit-color-swatch {
+			border: none;
 		}
 	}
 }
@@ -103,6 +136,7 @@
 		border: 1px solid transparent;
 		border-radius: 5px;
 		transition: .15s ease-in-out;
+		cursor: pointer;
 	}
 }
 
@@ -174,11 +208,9 @@
 	}
 
 	&__avatar {
-		max-width: 74px;
-		max-height: 74px;
-		min-width: 74px;
-		min-height: 74px;
-		margin-top: 4px;
+		height: 100%;
+		max-width: 64px;
+		min-width: 40px;
 
 		img {
 			width: 100%;
@@ -266,5 +298,15 @@
 		visibility: visible;
 		z-index: -1;
 		white-space: nowrap;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	
+	.athlete-chart {
+		
+		&__avatar {
+			display: none;
+		}
 	}
 }

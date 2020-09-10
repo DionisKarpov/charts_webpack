@@ -45,10 +45,10 @@
                             <li>Football</li>
                         </ul>
                         <ul class="top-positions">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
+                            <li data-toggle="modal" data-target="#teamNameModal">1</li>
+                            <li data-toggle="modal" data-target="#teamNameModal">2</li>
+                            <li data-toggle="modal" data-target="#teamNameModal">3</li>
+                            <li data-toggle="modal" data-target="#teamNameModal">4</li>
                         </ul>
                     </div>
                     <div class="chart-table">
@@ -57,39 +57,54 @@
                                 <a data-toggle="modal" data-target="#positionModal" class="link">
                                     Add position
                                 </a>
+                                <div class="color-picker">
+                                    <input type="color" value="#e66465">
+                                </div>
                             </li>
                             <li>
                                 <a data-toggle="modal" data-target="#positionModal" class="link">
                                     Goalkeeper
                                 </a>
+                                <div class="color-picker">
+                                    <input type="color" value="#34b6bf">
+                                </div>
                             </li>
                             <li>
                                 <a data-toggle="modal" data-target="#positionModal" class="link">
                                     Add position
                                 </a>
+                                <div class="color-picker">
+                                    <input type="color" value="#412ad4">
+                                </div>
                             </li>
                             <li>
                                 <a data-toggle="modal" data-target="#positionModal" class="link">
                                     Forward
                                 </a>
+                                <div class="color-picker">
+                                    <input type="color" value="#c216d9">
+                                </div>
                             </li>
                             <li>
                                 <a data-toggle="modal" data-target="#positionModal" class="link">
                                     Add position
                                 </a>
+                                <div class="color-picker">
+                                    <input type="color" value="#e8dd43">
+                                </div>
                             </li>
                         </ul>
                         <ul class="swappable">
                             <li class="athlete-chart">
                                 <div class="athlete-chart__left">
-                                    <div class="athlete-chart__card-info">85kg / 186cm</div>
                                     <div class="athlete-chart__avatar">
                                         <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="athlete-chart__right">
                                     <div class="athlete-chart__year">2020</div>
-                                    <div class="athlete-chart__name">John<br> Best</div>
+                                    <div class="athlete-chart__name">John Best</div>
+                                    <div class="athlete-chart__card-info">85kg / 186cm</div>
                                     <div class="athlete-chart__actions">
                                         <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
                                               data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
@@ -115,56 +130,14 @@
                             </li>
                             <li class="athlete-chart">
                                 <div class="athlete-chart__left">
-                                    <div class="athlete-chart__card-info">85kg / 186cm</div>
                                     <div class="athlete-chart__avatar">
                                         <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="athlete-chart__right">
                                     <div class="athlete-chart__year">2020</div>
-                                    <div class="athlete-chart__name">John<br> Best</div>
-                                    <div class="athlete-chart__actions">
-                                        <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
-                                              data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
-                                            <span class="athlete-chart__tooltip">Info</span>
-                                        </span>
-                                        <span class="athlete-chart__remove athlete-chart__remove--small" alt="Remove"
-                                              data-toggle="modal" data-target="#removeAthleteModal" onclick="stopEvent(event)">
-                                            <span class="athlete-chart__tooltip">
-                                              Remove from chart
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="athlete athlete--empty">
-                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
-                            </li>
-                            <li class="athlete athlete--empty">
-                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
-                            </li>
-                            <li class="athlete athlete--empty">
-                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
-                            </li>
-                            <li class="athlete athlete--empty">
-                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
-                            </li>
-                            <li class="athlete athlete--empty">
-                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
-                            </li>
-                            <li class="athlete athlete--empty">
-                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
-                            </li>
-                            <li class="athlete-chart">
-                                <div class="athlete-chart__left">
+                                    <div class="athlete-chart__name">John Best</div>
                                     <div class="athlete-chart__card-info">85kg / 186cm</div>
-                                    <div class="athlete-chart__avatar">
-                                        <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="athlete-chart__right">
-                                    <div class="athlete-chart__year">2020</div>
-                                    <div class="athlete-chart__name">John<br> Best</div>
                                     <div class="athlete-chart__actions">
                                         <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
                                               data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
@@ -199,14 +172,56 @@
                             </li>
                             <li class="athlete-chart">
                                 <div class="athlete-chart__left">
-                                    <div class="athlete-chart__card-info">85kg / 186cm</div>
                                     <div class="athlete-chart__avatar">
                                         <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="athlete-chart__right">
                                     <div class="athlete-chart__year">2020</div>
-                                    <div class="athlete-chart__name">John<br> Best</div>
+                                    <div class="athlete-chart__name">John Best</div>
+                                    <div class="athlete-chart__card-info">85kg / 186cm</div>
+                                    <div class="athlete-chart__actions">
+                                        <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
+                                              data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
+                                            <span class="athlete-chart__tooltip">Info</span>
+                                        </span>
+                                        <span class="athlete-chart__remove athlete-chart__remove--small" alt="Remove"
+                                              data-toggle="modal" data-target="#removeAthleteModal" onclick="stopEvent(event)">
+                                            <span class="athlete-chart__tooltip">
+                                              Remove from chart
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="athlete athlete--empty">
+                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
+                            </li>
+                            <li class="athlete athlete--empty">
+                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
+                            </li>
+                            <li class="athlete athlete--empty">
+                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
+                            </li>
+                            <li class="athlete athlete--empty">
+                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
+                            </li>
+                            <li class="athlete athlete--empty">
+                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
+                            </li>
+                            <li class="athlete athlete--empty">
+                                <a href="#" class="link link--center" data-toggle="modal" data-target="#addAthleteModal">Add athlete</a>
+                            </li>
+                            <li class="athlete-chart">
+                                <div class="athlete-chart__left">
+                                    <div class="athlete-chart__avatar">
+                                        <img src="https://cdn.vox-cdn.com/thumbor/l9l4iztkKVgnxD0vMmqYwknBZu4=/99x0:1179x810/1400x1400/filters:focal(99x0:1179x810):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46094226/Jon_snow.0.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="athlete-chart__right">
+                                    <div class="athlete-chart__year">2020</div>
+                                    <div class="athlete-chart__name">John Best</div>
+                                    <div class="athlete-chart__card-info">85kg / 186cm</div>
                                     <div class="athlete-chart__actions">
                                         <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
                                               data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
@@ -326,6 +341,32 @@
                                 </button>
                                 <button type="button" class="button button--contained button--medium ml-auto">
                                     Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="teamNameModal" tabindex="-1" role="dialog" aria-labelledby="teamNameModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog--medium" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3 class="modal-title text-center">Team name</h3>
+                        <div class="modal-form w-100">
+                            <div class="modal-form__section modal-form__section--column align-items-start">
+                                <label class="modal-form__label">Name</label>
+                                <div class="modal-form__input input input--contained">
+                                    <input type="name" name="name" placeholder="Enter team name">
+                                </div>
+                            </div>
+                            <div class="modal-form__buttons mt-4">
+                                <button type="button" class="button button--ghost button--medium" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="button button--contained button--medium ml-auto">
+                                    Save
                                 </button>
                             </div>
                         </div>
@@ -616,7 +657,7 @@
             '}\n' +
             '.chart-table .swappable li {\n' +
             '    width: ' + width + 'px;\n' +
-            '    height: ' + height + 'px;\n' +
+            '    min-height: ' + 124 + 'px;\n' +
             '}';
           head.appendChild(style);
           style.appendChild(document.createTextNode(css));

@@ -143,6 +143,10 @@
 
 	.main {
 
+		&__chart-page {
+			width: 100%;
+		}
+
 		&__container {
 			flex-direction: column;
 		}
