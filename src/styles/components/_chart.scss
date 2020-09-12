@@ -1,7 +1,7 @@
 .swappable {
 	display: grid;
 	grid-template-columns: repeat(4, 25% [col-start]);
-	grid-template-rows: repeat(5, 124px [col-start]);
+	grid-template-rows: repeat(5, 20% [col-start]);
 	column-gap: 5px;
 	row-gap: 5px;
 	padding: 0;
