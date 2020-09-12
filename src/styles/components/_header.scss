@@ -9,7 +9,8 @@
 	height: 60px;
 	padding: 0 32px;
 	background: #F2F4F2;
-	box-shadow: 0px 2px 10px 1px rgba(#8c8c8c, 0.3);
+	box-shadow: 0 2px 10px 1px rgba(#8c8c8c, 0.3);
+	z-index: 100;
 
 	&__home	{
 		color: #293A5B;

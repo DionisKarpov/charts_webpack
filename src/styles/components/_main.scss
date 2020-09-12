@@ -32,23 +32,27 @@
 
 	&__chart-page {
 		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		//display: flex;
+		//align-items: center;
+		//justify-content: center;
 		width: calc(100% - 200px);
 		height: calc(100vh - 60px);
-		flex-wrap: wrap;
-		align-content: center;
+		text-align: center;
+		margin-left: auto;
+		//flex-wrap: wrap;
+		//align-content: center;
 	}
 
 	&__top {
-		position: absolute;
+		//position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: calc(100% - 64px);
-		top: 24px;
-		left: 24px;
+		width: 100%;
+		margin-top: 40px;
+		padding: 0 60px;
+		//top: 24px;
+		//left: 24px;
 	}
 
 	&__remove {
