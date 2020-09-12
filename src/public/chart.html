@@ -105,7 +105,7 @@
                                     <div class="athlete-chart__right">
                                         <div class="athlete-chart__year">2020</div>
                                         <div class="athlete-chart__name">John Best</div>
-                                        <div class="athlete-chart__card-info">85kg / 186cm</div>
+                                        <div class="athlete-chart__card-info">140 lbs / 5"6"</div>
                                         <div class="athlete-chart__actions">
                                         <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
                                               data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
@@ -138,7 +138,7 @@
                                     <div class="athlete-chart__right">
                                         <div class="athlete-chart__year">2020</div>
                                         <div class="athlete-chart__name">John Best</div>
-                                        <div class="athlete-chart__card-info">85kg / 186cm</div>
+                                        <div class="athlete-chart__card-info">140 lbs / 5"6"</div>
                                         <div class="athlete-chart__actions">
                                         <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
                                               data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
@@ -180,7 +180,7 @@
                                     <div class="athlete-chart__right">
                                         <div class="athlete-chart__year">2020</div>
                                         <div class="athlete-chart__name">John Best</div>
-                                        <div class="athlete-chart__card-info">85kg / 186cm</div>
+                                        <div class="athlete-chart__card-info">140 lbs / 5"6"</div>
                                         <div class="athlete-chart__actions">
                                         <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
                                               data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
@@ -222,7 +222,7 @@
                                     <div class="athlete-chart__right">
                                         <div class="athlete-chart__year">2020</div>
                                         <div class="athlete-chart__name">John Best</div>
-                                        <div class="athlete-chart__card-info">85kg / 186cm</div>
+                                        <div class="athlete-chart__card-info">140 lbs / 5"6"</div>
                                         <div class="athlete-chart__actions">
                                         <span class="athlete-chart__info-icon athlete-chart__info-icon--small ml-auto" alt="Info"
                                               data-toggle="modal" data-target="#athleteModal" onclick="stopEvent(event)">
@@ -657,10 +657,11 @@
             '.top-positions li {\n' +
             '    width: ' + width + 'px;\n' +
             '}\n' +
+            '.swappable li.draggable-mirror {\n' +
+            '    height: ' + height + 'px;\n' +
+            '}\n' +
             '.chart-table .swappable li {\n' +
             '    width: ' + width + 'px;\n' +
-            '    min-height: ' + 124 + 'px;\n' +
-            '    height: ' + 124 + 'px;\n' +
             '}';
           head.appendChild(style);
           style.appendChild(document.createTextNode(css));
