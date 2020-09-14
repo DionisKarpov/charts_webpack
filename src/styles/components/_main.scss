@@ -11,6 +11,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		text-align: center;
 		height: calc(100vh - 60px);
 	}
 	&__title {
@@ -32,27 +33,19 @@
 
 	&__chart-page {
 		position: relative;
-		//display: flex;
-		//align-items: center;
-		//justify-content: center;
 		width: calc(100% - 200px);
 		height: calc(100vh - 60px);
 		text-align: center;
 		margin-left: auto;
-		//flex-wrap: wrap;
-		//align-content: center;
 	}
 
 	&__top {
-		//position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		margin-top: 40px;
 		padding: 0 60px;
-		//top: 24px;
-		//left: 24px;
 	}
 
 	&__remove {

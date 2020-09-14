@@ -1,7 +1,8 @@
 .athletes {
 
 	&__list-container {
-		width: 100%;
+		width: calc(100% - 200px);
+		margin-left: auto;
 		height: 100%;
 		padding: 24px;
 	}
@@ -259,5 +260,19 @@
 		&__tooltip {
 			font-size: 12px;
 		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	
+	.athletes__list-container {
+		width: calc(100% - 140px);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	
+	.athletes__list-container {
+		width: 100%;
 	}
 }
