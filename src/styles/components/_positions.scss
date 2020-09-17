@@ -288,3 +288,21 @@
 		}
 	}
 }
+
+@media screen and (max-width: 480px) {
+	
+	.positions {
+
+		&__list-title {
+			white-space: nowrap;
+			margin-top: 5px;
+		}
+	}
+
+	.button {
+		white-space: nowrap;
+		letter-spacing: 0;
+		padding: 12px 8px;
+	}
+}
+

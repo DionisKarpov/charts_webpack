@@ -331,8 +331,9 @@
 	}
 
 	.modal-form {
-		max-height: calc(100vh - 200px);
-		overflow-y: auto;
+		max-height: calc(100vh - 300px);
+		height: calc(100vh - 300px);
+		overflow-y: scroll;
 		overflow-x: hidden;
 		padding-right: 4px;
 
@@ -372,5 +373,10 @@
 			max-width: calc(100vw - 48px);
 			width: calc(100vw - 48px);
 		}
+	}
+
+	.modal-form__input-container {
+		min-height: 71px !important;
+		height: 71px !important;
 	}
 }

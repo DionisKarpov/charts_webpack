@@ -82,3 +82,14 @@
     width: 100%;
 	}
 }
+
+@media screen and (max-width: 480px) {
+
+	.header__back {
+		margin-left: -8px;
+	}
+	
+	.header__logo-container {
+		left: 39%;
+	}
+}
