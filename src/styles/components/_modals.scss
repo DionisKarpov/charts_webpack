@@ -23,16 +23,16 @@
 				width: 2px !important;
 				border-radius: 4px !important;
 			}
-		
+
 			&::-webkit-scrollbar-track {
 				background: #eee !important;
 			}
-		
-		
+
+
 			&::-webkit-scrollbar-thumb {
 				background: #888  !important;
 			}
-		
+
 			&::-webkit-scrollbar-thumb:hover {
 				background: #555  !important;
 			}
@@ -207,7 +207,7 @@
     outline: none !important;
     transition: .2s ease-in-out;
 		color: #455a64;
-		
+
 		&::-webkit-scrollbar {
       background-color: transparent !important;
       width: 2px !important;
@@ -309,8 +309,8 @@
 	}
 }
 
-@media screen and (max-width: 900px) {
-	
+@media screen and (max-width: 768px) {
+
 	.modal-dialog {
 		max-width: calc(100vw - 48px);
 		width: calc(100vw - 48px);
@@ -319,9 +319,9 @@
 			max-width: calc(100vw - 48px);
 			width: calc(100vw - 48px);
 		}
-	
+
 		&--guide {
-	
+
 			.modal-form {
 				max-width: calc(100vw - 48px);
 				width: calc(100vw - 48px);
@@ -341,20 +341,20 @@
 			width: 2px !important;
 			border-radius: 4px !important;
 		}
-	
+
 		&::-webkit-scrollbar-track {
 			background: #eee !important;
 		}
-	
-	
+
+
 		&::-webkit-scrollbar-thumb {
 			background: #888  !important;
 		}
-	
+
 		&::-webkit-scrollbar-thumb:hover {
 			background: #555  !important;
 		}
-		
+
 		&__section {
 			flex-direction: column;
 
@@ -366,13 +366,21 @@
 }
 
 @media screen and (max-width: 600px) {
-	
+
 	.modal-dialog {
-	
+		top: auto;
+		transform: translate(-50%, 0) !important;
+
 		&--medium {
 			max-width: calc(100vw - 48px);
 			width: calc(100vw - 48px);
 		}
+	}
+
+	.modal-form {
+		max-height: none;
+		height: auto;
+		overflow: auto;
 	}
 
 	.modal-form__input-container {
