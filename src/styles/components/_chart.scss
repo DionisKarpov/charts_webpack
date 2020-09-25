@@ -29,19 +29,21 @@
 				cursor: grabbing;
 			}
 		}
+	}
+}
 
-		&.draggable {
+body.draggable--is-dragging {
+	.draggable {
 
-			&-source {
+		&-source {
 
-				&--is-dragging {
-					background: #99c2d6;
-				}
+			&--is-dragging {
+				background: #99c2d6;
 			}
+		}
 
-			&-mirror {
-				background: #d7ecfc !important;
-			}
+		&-mirror {
+			background: #d7ecfc !important;
 		}
 	}
 }
@@ -171,7 +173,7 @@
 
 .athlete-chart {
 	display: flex;
-	flex-wrap: nowrap;	
+	flex-wrap: nowrap;
 	padding: 10px;
 	border: 1px solid #8c8c8c;
 	background: #e2e4e2;
@@ -239,7 +241,7 @@
     border-radius: 50%;
 		transition: .15s ease-in-out;
 		cursor: pointer;
-		
+
 		&:before  {
 			width: 18px;
 			height: 18px;
@@ -252,7 +254,7 @@
 		&--small {
 			height: 28px;
 			width: 28px;
-			
+
 			&:before {
 				width: 14px;
 				height: 14px;
@@ -310,9 +312,9 @@
 }
 
 @media screen and (max-width: 1100px) {
-	
+
 	.athlete-chart {
-		
+
 		&__avatar {
 			display: none;
 		}
