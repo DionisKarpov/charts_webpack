@@ -628,7 +628,12 @@
             </div>
         </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta/lib/draggable.min.js"></script>
     <script>
+        new Draggable.Swappable(document.querySelectorAll('.swappable'), {
+            draggable: 'li'
+        });
+        
         function stopEvent(event) {
             event.preventDefault();
         }
